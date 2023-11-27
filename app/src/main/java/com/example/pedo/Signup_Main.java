@@ -38,7 +38,7 @@ public class Signup_Main extends AppCompatActivity {
             }
         });
 
-        signup.setOnClickListener(new View.OnClickListener() {
+        signup.setOnClickListener(new View.OnClickListener() {                                      //condition check inorder for a successful registration
             @Override
             public void onClick(View view) {
                 if(first_name.getText().toString().isEmpty())

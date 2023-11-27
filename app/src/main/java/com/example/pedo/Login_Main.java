@@ -58,7 +58,7 @@ public class Login_Main extends AppCompatActivity {
 
     }
     @Override
-    public void onBackPressed(){
+    public void onBackPressed(){                                                                    //function to travel to the previous page when back button is pressed
         super.onBackPressed();
         Intent intent = new Intent(Login_Main.this, loginsignup.class);
         startActivity(intent);

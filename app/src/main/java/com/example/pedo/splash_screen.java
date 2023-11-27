@@ -28,7 +28,7 @@ public class splash_screen extends AppCompatActivity {
         Glide.with(this).load(R.drawable.last_logo).into(logo);
 
 
-        new Handler().postDelayed(() ->
+        new Handler().postDelayed(() ->                                                             //function to move to the next activity after a wait of 3 sec
         {
             Intent intent= new Intent(splash_screen.this,loginsignup.class);
             startActivity(intent);
@@ -37,7 +37,7 @@ public class splash_screen extends AppCompatActivity {
     }
 
     @Override
-    public void onBackPressed(){
+    public void onBackPressed(){                                                                    //function to execute double back to exit
         if(doubleBackToExitPressedOnce){
             super.onBackPressed();
             return;
