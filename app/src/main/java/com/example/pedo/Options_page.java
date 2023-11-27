@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class Options_page extends AppCompatActivity {
-
+// in this page, the user decides the functionality to be executed next. the user has 3 options- history, distance calculation and multimedia
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

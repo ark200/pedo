@@ -25,6 +25,7 @@ public class Login_Main extends AppCompatActivity {
         Button login_main   =   findViewById(R.id.login_button_main);
         Button signup_login =   findViewById(R.id.signup_button_loginpage);
 
+        // re-directs to the signup page when the sign-up button is clicked
         signup_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -37,19 +38,20 @@ public class Login_Main extends AppCompatActivity {
         login_main.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(username.getText().toString().isEmpty())
+                if(username.getText().toString().isEmpty())                                                             //checks if the username is empty or not
                     username.setError("Username cannot be Empty");
-                else if (password.getText().toString().isEmpty())
+                else if (password.getText().toString().isEmpty())                                                       //checks if the password is empty
                     password.setError("Password cannot be empty");
                 else{
-                    if(username.getText().toString().equals(password.getText().toString()))
+                    //in this project, we approve login if the username and the password are the same
+                    if(username.getText().toString().equals(password.getText().toString()))                             //condition check if the username and password are same
                     {
                         Intent intent = new Intent(Login_Main.this,Homepage.class);
                         startActivity(intent);
                         finish();
                     }
                     else
-                        Toast.makeText(Login_Main.this,"Invalid Credentials",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Login_Main.this,"Invalid Credentials",Toast.LENGTH_SHORT).show();    //indicates the user that the credentials are wrong
                 }
             }
         });
