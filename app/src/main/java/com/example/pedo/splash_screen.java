@@ -24,6 +24,9 @@ public class splash_screen extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_splash_screen);
 
+        ImageView logo      =   findViewById(R.id.splash_screen);
+        Glide.with(this).load(R.drawable.last_logo).into(logo);
+
 
         new Handler().postDelayed(() ->
         {

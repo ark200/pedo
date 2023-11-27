@@ -50,6 +50,7 @@ public class distance extends AppCompatActivity {
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast.makeText(distance.this,"You've started walking.",Toast.LENGTH_SHORT).show();
                 startButton.setClickable(false);
                 stopButton.setClickable(true);
                 distanceTextView.setText("YOU HAVE WALKED: ");
@@ -60,6 +61,8 @@ public class distance extends AppCompatActivity {
         stopButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                bravo.setText("CONGRATULATIONS");
+                Toast.makeText(distance.this,"You've walked a distance of "+totalDistance,Toast.LENGTH_SHORT).show();
                 startButton.setClickable(true);
                 stopButton.setClickable(false);
                 stopLocationUpdates();
@@ -113,7 +116,7 @@ public class distance extends AppCompatActivity {
 
     private void updateUI(final double distance) {
         distanceTextView.setText("YOU HAVE WALKED " + distance + " meters");
-        bravo.setText("CONGRATULATIONS! ");
+//        bravo.setText("CONGRATULATIONS! ");
 
 //        runOnUiThread(new Runnable() {
 //            @Override

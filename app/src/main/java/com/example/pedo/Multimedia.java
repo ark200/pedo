@@ -3,6 +3,7 @@ package com.example.pedo;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
@@ -17,6 +18,15 @@ public class Multimedia extends AppCompatActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_multimedia);
+
+
 //        String videoStr = "<html><body>Promo video<br><iframe width=\"420\" height=\"315\" src=\"https://www.youtube.com/watch?v=o20sLxinfwc" frameborder=\"0\" allowfullscreen></iframe></body></html>";
+    }
+    @Override
+    public void onBackPressed(){
+        super.onBackPressed();
+        Intent intent = new Intent(Multimedia.this, Options_page.class);
+        startActivity(intent);
+        finish();
     }
 }
