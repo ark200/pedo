@@ -8,8 +8,10 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.pm.PackageManager;
 import android.location.Location;
+import android.location.LocationManager;
 import android.location.LocationRequest;
 import android.os.Bundle;
 import android.os.Handler;
@@ -43,6 +45,7 @@ public class New_Homepage extends AppCompatActivity {
     private LocationCallback locationCallback;
     private Location previousLocation;
     private double totalDistance;
+    private LocationManager locationManager;
     private LocationRequest locationRequest;
     int locationInterval = 100;
 
@@ -56,6 +59,8 @@ public class New_Homepage extends AppCompatActivity {
 //        calories_view           =   findViewById(R.id.calories_view_new);
         start                   =   findViewById(R.id.start_button_new);
         stop                    =   findViewById(R.id.stop_button_new);
+
+        locationManager     = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
 
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
         start.setOnClickListener(new View.OnClickListener() {
@@ -123,6 +128,7 @@ public class New_Homepage extends AppCompatActivity {
     }
 
     private void startLocationUpdates(){
+
 
 
 //        locationRequest = new LocationRequest.Builder(PRIORITY_HIGH_ACCURACY).setMinUpdateIntervalMillis(1000).setMaxUpdateDelayMillis(100).build();
