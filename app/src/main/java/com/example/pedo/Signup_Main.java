@@ -22,6 +22,7 @@ public class Signup_Main extends AppCompatActivity {
 
         EditText first_name         =   findViewById(R.id.firstname_signup_main);
         EditText last_name          =   findViewById(R.id.lastname_signup_main);
+        EditText username           =   findViewById(R.id.username_signup_main);
         EditText password           =   findViewById(R.id.password_signup_main);
         EditText confirm_password   =   findViewById(R.id.confirm_password_singup_main);
 
@@ -44,6 +45,8 @@ public class Signup_Main extends AppCompatActivity {
                     first_name.setError("Firstname cannot be empty");
                 else if(last_name.getText().toString().isEmpty())
                     last_name.setError("Lastname cannot be empty");
+                else if(username.getText().toString().isEmpty())
+                    username.setError("Username cannot be empty");
                 else if (password.getText().toString().isEmpty())
                     password.setError("Password cannot be empty");
                 else if (confirm_password.getText().toString().isEmpty())
@@ -53,11 +56,19 @@ public class Signup_Main extends AppCompatActivity {
                 else if (!password.getText().toString().equals(confirm_password.getText().toString()))
                     Toast.makeText(Signup_Main.this,"Passwords don't match.",Toast.LENGTH_SHORT).show();
                 else{
+                    Toast.makeText(Signup_Main.this,"SIGNUP SUCCESSFUL",Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(Signup_Main.this,Login_Main.class);
                     startActivity(intent);
                     finish();
                 }
             }
         });
+    }
+    @Override
+    public void onBackPressed(){
+        super.onBackPressed();
+        Intent intent = new Intent(Signup_Main.this, loginsignup.class);
+        startActivity(intent);
+        finish();
     }
 }

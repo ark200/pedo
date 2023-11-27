@@ -12,6 +12,8 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/white"
+
             android:id="@+id/relative1">
             <androidx.core.widget.NestedScrollView
                 android:layout_width="match_parent"
@@ -25,16 +27,23 @@
                     android:gravity="center"
                     android:padding="20dp">
 
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/last_logo"
+                        />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/bravo"
+                        android:textColor="@color/black"
                         />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/distance_display"
                         android:hint="Distance Walked"
+                        android:textColor="@color/black"
                         />
                     <!--                    <TextView-->
                     <!--                        android:layout_width="wrap_content"-->

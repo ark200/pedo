@@ -7,6 +7,7 @@ import androidx.core.app.ActivityCompat;
 
 import android.Manifest;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationListener;
@@ -64,6 +65,14 @@ public class distance extends AppCompatActivity {
                 stopLocationUpdates();
             }
         });
+    }
+
+    @Override
+    public void onBackPressed(){
+        super.onBackPressed();
+        Intent intent = new Intent(distance.this, Options_page.class);
+        startActivity(intent);
+        finish();
     }
 
     private void startLocationUpdates() {

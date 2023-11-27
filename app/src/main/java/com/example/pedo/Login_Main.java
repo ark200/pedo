@@ -57,4 +57,11 @@ public class Login_Main extends AppCompatActivity {
         });
 
     }
+    @Override
+    public void onBackPressed(){
+        super.onBackPressed();
+        Intent intent = new Intent(Login_Main.this, loginsignup.class);
+        startActivity(intent);
+        finish();
+    }
 }

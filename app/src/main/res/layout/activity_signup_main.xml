@@ -49,6 +49,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="enter the first name"
+                        android:textColor="@color/black"
                         android:id="@+id/firstname_signup_main"
                         />
 
@@ -64,6 +65,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/lastname_signup_main"
+                        android:textColor="@color/black"
                         android:hint="enter your last name"
                         />
                     <TextView
@@ -78,6 +80,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/username_signup_main"
+                        android:textColor="@color/black"
                         android:hint="enter your username"
                         />
                     <TextView
@@ -93,6 +96,7 @@
                         android:layout_height="wrap_content"
                         android:id="@+id/password_signup_main"
                         android:inputType="textPassword"
+                        android:textColor="@color/black"
                         android:hint="please enter your password"
                         />
                     <TextView
@@ -108,6 +112,7 @@
                         android:layout_height="wrap_content"
                         android:id="@+id/confirm_password_singup_main"
                         android:inputType="textPassword"
+                        android:textColor="@color/black"
                         android:hint="please confirm your password"
                         />
 
