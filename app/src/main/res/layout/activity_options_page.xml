@@ -8,6 +8,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
+        android:background="@color/white"
         android:layout_height="match_parent">
         <RelativeLayout
             android:layout_width="match_parent"
@@ -41,18 +42,6 @@
                         android:id="@+id/multimedia"
                         android:text="Multimedia"/>
 
-                    <!--                    <TextView-->
-                    <!--                        android:layout_width="wrap_content"-->
-                    <!--                        android:layout_height="wrap_content"-->
-                    <!--                        android:hint="Total Steps"-->
-                    <!--                        android:id="@+id/step_count_view_new"-->
-                    <!--                        />-->
-                    <!--                    <TextView-->
-                    <!--                        android:layout_width="wrap_content"-->
-                    <!--                        android:layout_height="wrap_content"-->
-                    <!--                        android:id="@+id/calories_view_new"-->
-                    <!--                        android:hint="Calories Burnt"-->
-                    <!--                        />-->
 
                 </LinearLayout>
             </androidx.core.widget.NestedScrollView>

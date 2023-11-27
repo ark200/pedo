@@ -13,7 +13,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#000000"
+            android:background="#ffffff"
             android:id="@+id/relative1">
 
             <androidx.core.widget.NestedScrollView
@@ -38,7 +38,7 @@
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="@drawable/pedo_splash"
+                            android:background="@drawable/last_logo"
                             />
                     </LinearLayout>
 
@@ -64,7 +64,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="USERNAME"
-                            android:textColor="@color/white"
+                            android:textColor="@color/black"
                             android:textStyle="bold"
                             android:textSize="20dp"
                             />
@@ -74,12 +74,13 @@
                             android:background="@drawable/rounded_fields"
                             android:hint="ENTER YOUR USERNAME"
                             android:id="@+id/username_login"
+                            android:textColor="@color/black"
                             />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="PASSWORD"
-                            android:textColor="@color/white"
+                            android:textColor="@color/black"
                             android:textStyle="bold"
                             android:textSize="20dp"
                             />
@@ -88,6 +89,8 @@
                             android:layout_height="wrap_content"
                             android:background="@drawable/rounded_fields"
                             android:hint="ENTER YOUR PASSWORD"
+                            android:textColor="@color/black"
+                            android:inputType="textPassword"
                             android:id="@+id/password_login"
                             />
 
@@ -109,7 +112,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Need to create an account?"
-                            android:textColor="@color/white"
+                            android:textColor="@color/black"
                             android:textStyle="italic"
                             />
                         <Button

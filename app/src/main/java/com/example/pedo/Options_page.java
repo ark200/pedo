@@ -25,7 +25,7 @@ public class Options_page extends AppCompatActivity {
         distance_home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Options_page.this, New_Homepage.class);
+                Intent intent = new Intent(Options_page.this, distance.class);
                 startActivity(intent);
                 finish();
             }

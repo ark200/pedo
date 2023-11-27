@@ -13,7 +13,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/pedo_main"
+            android:background="@drawable/last_logo"
             android:alpha="0.6"
             android:id="@+id/relative1">
 
@@ -92,6 +92,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/password_signup_main"
+                        android:inputType="textPassword"
                         android:hint="please enter your password"
                         />
                     <TextView
@@ -106,6 +107,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/confirm_password_singup_main"
+                        android:inputType="textPassword"
                         android:hint="please confirm your password"
                         />
 

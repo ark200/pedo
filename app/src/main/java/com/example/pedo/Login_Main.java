@@ -46,7 +46,7 @@ public class Login_Main extends AppCompatActivity {
                     //in this project, we approve login if the username and the password are the same
                     if(username.getText().toString().equals(password.getText().toString()))                             //condition check if the username and password are same
                     {
-                        Intent intent = new Intent(Login_Main.this,Homepage.class);
+                        Intent intent = new Intent(Login_Main.this,Options_page.class);
                         startActivity(intent);
                         finish();
                     }

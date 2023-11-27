@@ -25,11 +25,19 @@
                     android:gravity="center"
                     android:padding="20dp">
 
-                    <WebView
+                    <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/video_play1"
-                        />
+                        android:layout_height="200dp"
+                        android:background="@drawable/media1"/>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:background="@drawable/media2"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:background="@drawable/media3"/>
 
                 </LinearLayout>
             </androidx.core.widget.NestedScrollView>

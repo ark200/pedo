@@ -30,7 +30,7 @@ public class loginsignup extends AppCompatActivity {
         Button login_button             =   findViewById(R.id.login_button);
         Button signup_button            =   findViewById(R.id.signup_button);
 
-        Glide.with(this).load(R.drawable.pedo_splash).into(loginsignup_image);
+        Glide.with(this).load(R.drawable.last_logo).into(loginsignup_image);
 
         login_button.setOnClickListener(new View.OnClickListener() {                                //login button is clicked and user is redirected to the login page
             @Override

@@ -19,12 +19,13 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class distance extends AppCompatActivity {
     private static final int REQUEST_LOCATION_PERMISSION = 1;
     private LocationManager locationManager;
     private LocationListener locationListener;
-    private TextView distanceTextView;
+    private TextView distanceTextView, bravo;
     private Button startButton, stopButton;
     private Location lastLocation;
     private double totalDistance = 0.0;
@@ -37,14 +38,20 @@ public class distance extends AppCompatActivity {
         setContentView(R.layout.activity_distance);
 
         distanceTextView = findViewById(R.id.distance_display);
+        bravo           =   findViewById(R.id.bravo);
         startButton = findViewById(R.id.start_distance);
         stopButton = findViewById(R.id.stop_distance);
 
         locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
 
+        startButton.setClickable(true);
+        stopButton.setClickable(false);
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                startButton.setClickable(false);
+                stopButton.setClickable(true);
+                distanceTextView.setText("YOU HAVE WALKED: ");
                 startLocationUpdates();
             }
         });
@@ -52,6 +59,8 @@ public class distance extends AppCompatActivity {
         stopButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                startButton.setClickable(true);
+                stopButton.setClickable(false);
                 stopLocationUpdates();
             }
         });
@@ -83,7 +92,7 @@ public class distance extends AppCompatActivity {
                 public void onProviderDisabled(String provider) {
                 }
             };
-            locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1000, 10, locationListener);
+            locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1000, 0, locationListener);
         } else {
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION}, REQUEST_LOCATION_PERMISSION);
         }
@@ -94,7 +103,8 @@ public class distance extends AppCompatActivity {
     }
 
     private void updateUI(final double distance) {
-        distanceTextView.setText("Distance: " + distance + " meters");
+        distanceTextView.setText("YOU HAVE WALKED " + distance + " meters");
+        bravo.setText("CONGRATULATIONS! ");
 
 //        runOnUiThread(new Runnable() {
 //            @Override

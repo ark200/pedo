@@ -53,7 +53,7 @@ public class Signup_Main extends AppCompatActivity {
                 else if (!password.getText().toString().equals(confirm_password.getText().toString()))
                     Toast.makeText(Signup_Main.this,"Passwords don't match.",Toast.LENGTH_SHORT).show();
                 else{
-                    Intent intent = new Intent(Signup_Main.this,Homepage.class);
+                    Intent intent = new Intent(Signup_Main.this,Login_Main.class);
                     startActivity(intent);
                     finish();
                 }
